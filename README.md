@@ -43,3 +43,7 @@ A program egy strukturált `.txt` állományból (`adatok.txt`) olvassa be az au
 * **KmAllas** (INT)
 * **Ar** (INT)
 * **Uzemanyag** (VARCHAR)
+
+## Projektmenedzsment (Trello)
+A projekt feladatainak felosztását és nyomon követését Trello táblán végeztük:
+*  **Trello Tábla Link:** https://trello.com/invite/b/6acde5f5fe315939eb376a2e/ATTI26908e592bbfea3d00e2c8d504b6ad4cB0189C9E/projekt
