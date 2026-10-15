@@ -1,0 +1,58 @@
+create database Autonyilvantarto
+default character set utf8
+collate utf8_hungarian_ci;
+
+CREATE TABLE Autok (
+    Rendszam VARCHAR(10) PRIMARY KEY,
+    Marka VARCHAR(30),
+    Modell VARCHAR(30),
+    GyartasiEv INT,
+    KmAllas INT,
+    Ar INT,
+    Uzemanyag VARCHAR(20)
+);
+
+
+INSERT INTO Autok
+(Rendszam, Marka, Modell, GyartasiEv, KmAllas, Ar, Uzemanyag)
+VALUES
+('ABC-123', 'Toyota', 'Corolla', 2018, 125000, 4500000, 'Benzin'),
+('XYZ-987', 'Volkswagen', 'Golf', 2015, 180000, 3800000, 'Dízel'),
+('AAA-111', 'Tesla', 'Model 3', 2021, 45000, 11500000, 'Elektromos'),
+('BBB-222', 'Ford', 'Focus', 2012, 210000, 2200000, 'Benzin'),
+('CCC-333', 'BMW', '320i', 2019, 95000, 7900000, 'Benzin'),
+('DDD-444', 'Audi', 'A4', 2017, 150000, 5800000, 'Dízel'),
+('EEE-555', 'Mercedes-Benz', 'C200', 2020, 62000, 9200000, 'Benzin'),
+('FFF-666', 'Skoda', 'Octavia', 2016, 195000, 3400000, 'Dízel'),
+('GGG-777', 'Honda', 'Civic', 2014, 160000, 3100000, 'Benzin'),
+('HHH-888', 'Kia', 'Ceed', 2022, 28000, 6900000, 'Benzin'),
+('III-999', 'Hyundai', 'Tucson', 2021, 38000, 8500000, 'Hibrid'),
+('JJJ-101', 'Nissan', 'Qashqai', 2018, 110000, 4900000, 'Benzin'),
+('KKK-202', 'Volvo', 'XC60', 2019, 88000, 9800000, 'Dízel'),
+('LLL-303', 'Mazda', 'CX-5', 2017, 135000, 5400000, 'Benzin'),
+('MMM-404', 'Suzuki', 'Vitara', 2020, 42000, 5200000, 'Hibrid'),
+('NNN-505', 'Renault', 'Clio', 2013, 175000, 1900000, 'Benzin'),
+('OOO-606', 'Peugeot', '308', 2016, 140000, 3200000, 'Dízel'),
+('PPP-777', 'Opel', 'Astra', 2011, 230000, 1600000, 'Benzin'),
+('QQQ-808', 'SEAT', 'Leon', 2018, 105000, 4300000, 'Benzin'),
+('RRR-909', 'Fiat', '500', 2019, 50000, 3700000, 'Benzin');
+
+
+Lekérdezés
+- SELECT Rendszam, Marka, Modell, GyartasiEv, KmAllas, Ar
+FROM Autok
+WHERE Uzemanyag = 'Benzin' 
+  AND KmAllas < 100000 
+  AND Ar > 5000000
+ORDER BY KmAllas ASC;
+
+-SELECT * FROM Autok
+WHERE Rendszam = 'ABC-123';
+
+-SELECT Marka, Modell, Ar, KmAllas
+FROM Autok
+WHERE Ar < 5000000
+ORDER BY Ar ASC;
+
+
+Készítette : Csajkás Olivér , Kerner Mátyás , Bodnár Attila
